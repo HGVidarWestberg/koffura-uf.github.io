@@ -59,3 +59,8 @@ input[type="text"],input[type="email"],textarea{width:100%;padding:.6rem;border:
 
 /* transition when JS updates CSS variables */
 *:not(img){transition:color .18s ease, background-color .18s ease, border-color .18s ease}
+
+/* Side spacing: keep 2mm gap left/right on all pages but keep header full-width */
+:root{--side-gap:2mm}
+body{padding-left:var(--side-gap);padding-right:var(--side-gap)}
+.site-header{margin-left:calc(-1 * var(--side-gap));margin-right:calc(-1 * var(--side-gap));padding-left:0;padding-right:0}
