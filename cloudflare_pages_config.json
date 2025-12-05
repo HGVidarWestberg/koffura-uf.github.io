@@ -1,0 +1,14 @@
+{
+  "name": "Koffura_UF",
+  "compatibility_date": "2025-12-05",
+  "build": {
+    "command": "", 
+    "directory": "."
+  },
+  "dev": {
+    "port": 8787
+  },
+  "routes": [
+    {"pattern": "/*", "destination": "/index.html"}
+  ]
+}
