@@ -1,6 +1,6 @@
 :root{
   --accent:#2e8555; /* primary strong green */
-  --accent-strong:#2e8555; /* explicit strong accent alias */
+  --accent-strong:var(--accent); /* explicit strong accent alias (mirrors --accent, so theming doesn't break) */
   --accent-soft:#84c6a6; /* requested softer green accent */
   --bg:#ffffff;
   --muted:#666;
