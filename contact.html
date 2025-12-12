@@ -28,7 +28,7 @@
 
       <div class="grid grid-2">
         <div>
-          <form class="contact-form" action="#" method="post">
+            <form id="contact-form" class="contact-form" novalidate>
             <label for="name">Namn</label>
             <input id="name" name="name" type="text" required>
 
@@ -38,7 +38,7 @@
             <label for="message">Meddelande</label>
             <textarea id="message" name="message" rows="6" required></textarea>
 
-            <p><button class="btn" type="submit">Skicka meddelande</button></p>
+              <p><button class="btn" type="submit">Send Message</button></p>
           </form>
         </div>
 
@@ -63,6 +63,7 @@
         </nav>
       </div>
     </footer>
-    <script src="js/theme-from-image.js" defer></script>
+      <script src="js/theme-from-image.js" defer></script>
+      <script src="js/contact-mailto.js" defer></script>
   </body>
   </html>
