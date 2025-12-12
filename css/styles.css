@@ -1,5 +1,7 @@
 :root{
-  --accent:#2e8555;
+  --accent:#2e8555; /* primary strong green */
+  --accent-strong:#2e8555; /* explicit strong accent alias */
+  --accent-soft:#84c6a6; /* requested softer green accent */
   --bg:#ffffff;
   --muted:#666;
   --max-width:1100px;
@@ -15,7 +17,7 @@ html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;b
 .logo-text{font-weight:700;color:var(--accent)}
 .main-nav a{margin-left:1rem;color:#222;text-decoration:none}
 .main-nav a:hover{color:var(--accent)}
-.hero{background:linear-gradient(180deg, #f9fff6 0%, #fff 100%);padding:3.25rem 0}
+.hero{background:linear-gradient(180deg, rgba(132,198,166,0.08) 0%, #fff 100%);padding:3.25rem 0}
 .hero h1{margin:0 0 .5rem;font-size:2rem}
 .hero-sub{color:var(--muted);margin:0 0 1rem}
 .section{padding:2rem 0}
@@ -25,12 +27,13 @@ html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;b
 .grid-3{grid-template-columns:repeat(3,1fr)}
 .card{background:#fff;border:1px solid #eee;padding:0;border-radius:var(--radius);box-shadow:0 1px 2px rgba(0,0,0,0.03)}
 .card-link{display:block;padding:1rem;color:inherit;text-decoration:none}
-.card-link:hover{background:#f9f9f9}
-.card-media{height:140px;background:linear-gradient(135deg,#efe 0%,#efe7ff 100%);border-radius:6px;margin-bottom:.75rem;object-fit:cover;width:100%;display:block}
+.card-link:hover{background:rgba(132,198,166,0.06);box-shadow:0 4px 8px rgba(132,198,166,0.06)}
+.card-media{height:140px;background:linear-gradient(135deg, rgba(132,198,166,0.12) 0%, #efe7ff 100%);border-radius:6px;margin-bottom:.75rem;object-fit:cover;width:100%;display:block}
 .muted{color:var(--muted)}
 .price{font-weight:700;font-size:1.1rem;color:var(--accent);margin:.5rem 0}
 .btn{background:var(--accent);color:#000;padding:.5rem 1rem;border-radius:6px;text-decoration:none;display:inline-block}
-.btn.ghost{background:transparent;color:#000;border:1px solid #000}
+.btn.ghost{background:transparent;color:var(--accent-strong);border:1px solid var(--accent-soft)}
+.btn.ghost:hover{background:var(--accent-soft);color:#000}
 .btn.small{padding:.35rem .6rem;font-size:.9rem}
 .btn.small.ghost{border:1px solid #ccc}
 .site-footer{border-top:1px solid #eee;padding:1rem 0;margin-top:2rem}
@@ -40,12 +43,17 @@ label{display:block;margin-top:.75rem}
 input[type="text"],input[type="email"],textarea{width:100%;padding:.6rem;border:1px solid #ddd;border-radius:6px;margin-top:.25rem}
 .contact-form{max-width:640px}
 .back-link{color:var(--accent);text-decoration:none;margin-bottom:1.5rem;display:inline-block}
+.main-nav a:hover{color:var(--accent-strong)}
+.footer-nav a:hover{color:var(--accent-soft)}
 .back-link:hover{text-decoration:underline}
 .product-image{width:100%;height:auto;border-radius:var(--radius);object-fit:cover}
 .product-price{font-size:1.5rem;font-weight:700;color:var(--accent);margin:.5rem 0 1.5rem}
 .product-info h3{margin-top:1.5rem;margin-bottom:.5rem}
 .product-actions{display:flex;gap:.75rem;margin-top:2rem}
 .product-actions .btn{flex:1}
+
+/* subtle accent decorative underline for headings */
+.hero h1::after{content:'';display:block;width:60px;height:6px;border-radius:8px;background:linear-gradient(90deg,var(--accent-soft),rgba(132,198,166,0.7));margin-top:.75rem}
 
 /* Responsive */
 @media (max-width:900px){
