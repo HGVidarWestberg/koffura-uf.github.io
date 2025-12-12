@@ -31,7 +31,8 @@ html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;b
 .card-media{height:140px;background:linear-gradient(135deg, rgba(132,198,166,0.12) 0%, #efe7ff 100%);border-radius:6px;margin-bottom:.75rem;object-fit:cover;width:100%;display:block}
 .muted{color:var(--muted)}
 .price{font-weight:700;font-size:1.1rem;color:var(--accent-strong);margin:.5rem 0;padding:.1rem .45rem;border-radius:6px;background:rgba(132,198,166,0.06);display:inline-block}
-.btn{background:var(--accent);color:#000;padding:.5rem 1rem;border-radius:6px;text-decoration:none;display:inline-block}
+.btn{background:var(--accent);color:#000;padding:.5rem 1rem;border-radius:8px;text-decoration:none;display:inline-block;box-shadow:0 6px 12px rgba(46,133,85,0.06);transition:transform .12s ease, box-shadow .12s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 28px rgba(46,133,85,0.08)}
 .btn.ghost{background:transparent;color:var(--accent-strong);border:1px solid var(--accent-soft)}
 .btn.ghost:hover{background:var(--accent-soft);color:#000}
 .btn.small{padding:.35rem .6rem;font-size:.9rem}
@@ -42,6 +43,16 @@ html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;b
 label{display:block;margin-top:.75rem}
 input[type="text"],input[type="email"],textarea{width:100%;padding:.6rem;border:1px solid #ddd;border-radius:6px;margin-top:.25rem}
 .contact-form{max-width:640px}
+/* Contact page improvements */
+.contact-page h1{font-size:2rem;margin-bottom:.25rem}
+.contact-page .grid{align-items:start}
+.contact-page aside h3{margin-top:0;margin-bottom:.5rem}
+.contact-page aside .socials{margin-top:1rem}
+.contact-page .contact-form{background:#fff;padding:1.25rem;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04)}
+.contact-page aside{background:#fff;padding:1.25rem;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04)}
+input[type="text"],input[type="email"],textarea{transition:box-shadow .18s ease, border .18s ease}
+input[type="text"]:focus,input[type="email"]:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 6px 18px rgba(46,133,85,0.06)}
+.contact-actions{display:flex;gap:.75rem;align-items:center}
 .back-link{color:var(--accent);text-decoration:none;margin-bottom:1.5rem;display:inline-block}
 .main-nav a:hover{color:var(--accent-strong)}
 .footer-nav a:hover{color:var(--accent-soft)}
@@ -51,6 +62,12 @@ input[type="text"],input[type="email"],textarea{width:100%;padding:.6rem;border:
 .product-info h3{margin-top:1.5rem;margin-bottom:.5rem}
 .product-actions{display:flex;gap:.75rem;margin-top:2rem}
 .product-actions .btn{flex:1}
+
+/* Social/Instagram button */
+.socials{display:flex;gap:.5rem;margin-top:.85rem}
+.btn.insta{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(90deg,#f58529 0%,#dd2a7b 50%,#8134af 100%);color:#fff;padding:.55rem .9rem;border-radius:10px;border:1px solid rgba(0,0,0,0.08);box-shadow:0 6px 12px rgba(130,40,120,0.08);text-decoration:none}
+.btn.insta svg{width:18px;height:18px;display:inline-block;vertical-align:middle}
+.btn.insta:hover{transform:translateY(-1px);box-shadow:0 12px 24px rgba(130,40,120,0.12)}
 
 /* subtle accent decorative underline for headings */
 .hero h1::after{content:'';display:block;width:60px;height:6px;border-radius:8px;background:linear-gradient(90deg,var(--accent-soft),rgba(132,198,166,0.7));margin-top:.75rem}

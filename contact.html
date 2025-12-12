@@ -30,23 +30,32 @@
         <div>
           <form class="contact-form" action="#" method="post">
             <label for="name">Namn</label>
-            <input id="name" name="name" type="text" required>
+            <input id="name" name="name" type="text" placeholder="Ditt namn" required>
 
             <label for="email">E-post</label>
-            <input id="email" name="email" type="email" required>
+            <input id="email" name="email" type="email" placeholder="din.email@exempel.se" required>
 
             <label for="message">Meddelande</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+            <textarea id="message" name="message" rows="6" placeholder="Berätta lite om din fråga..." required></textarea>
 
             <p><button class="btn" type="submit">Skicka meddelande</button></p>
+            <p class="muted">Vi svarar normalt inom 48 timmar.</p>
           </form>
         </div>
 
         <aside>
           <h3>Kontaktuppgifter</h3>
-          <p>Email: <a href="mailto:info@koffurauf.example">KoffuraUF.gmail.com</a></p>
-          <p>Phone: +46 70 000 0000</p>
+          <p>Email: <a href="mailto:KoffuraUF@gmail.com">KoffuraUF@gmail.com</a></p>
+          <p>Phone: <a href="tel:+46700000000">+46 70 000 0000</a></p>
           <p class="muted">Eller kontakta oss via sociala medier för snabba uppdateringar.</p>
+          <p class="muted">Vi delar nyheter, produktlanseringar och erbjudanden på Instagram.</p>
+          <div class="socials">
+            <a class="btn insta" href="https://www.instagram.com/koffurauf/?igsh=MW41NXIxbXZ3cXpnYQ%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Följ Koffura UF på Instagram — öppnas i nytt fönster">
+              <!-- Inline Instagram SVG icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .2 2.5.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.6.3 1.3.4 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 2-.4 2.5-.2.6-.5 1-1 1.4-.4.4-.8.7-1.4.9-.6.2-1.3.3-2.5.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.2-2.5-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.6-.3-1.3-.4-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-2 .4-2.5.2-.6.5-1 0-.9.4-.4.7-.8.9-1.4.2-.6.3-1.3.4-2.5C4.4 2.2 4.8 2.2 8 2.2h4zM12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm4.6-8.4a1.4 1.4 0 1 1 0-2.8 1.4 1.4 0 0 1 0 2.8z"></path></svg>
+              <span>Följ oss på Instagram</span>
+            </a>
+          </div>
         </aside>
       </div>
     </main>
