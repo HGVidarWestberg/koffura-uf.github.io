@@ -27,7 +27,7 @@ html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;b
 .grid-3{grid-template-columns:repeat(3,1fr)}
 .card{background:#fff;border:1px solid #eee;padding:0;border-radius:var(--radius);box-shadow:0 1px 2px rgba(0,0,0,0.03)}
 .card-link{display:block;padding:1rem;color:inherit;text-decoration:none}
-.card-link:hover{background:rgba(132,198,166,0.06);box-shadow:0 4px 8px rgba(132,198,166,0.06)}
+.card-link:hover{background:rgba(132,198,166,0.06);box-shadow:0 4px 8px rgba(132,198,166,0.06);border-left:4px solid rgba(132,198,166,0.16);padding-left:calc(1rem - 3px)}
 .card-media{height:140px;background:linear-gradient(135deg, rgba(132,198,166,0.12) 0%, #efe7ff 100%);border-radius:6px;margin-bottom:.75rem;object-fit:cover;width:100%;display:block}
 .muted{color:var(--muted)}
 .price{font-weight:700;font-size:1.1rem;color:var(--accent);margin:.5rem 0}
@@ -36,7 +36,7 @@ html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;b
 .btn.ghost:hover{background:var(--accent-soft);color:#000}
 .btn.small{padding:.35rem .6rem;font-size:.9rem}
 .btn.small.ghost{border:1px solid #ccc}
-.site-footer{border-top:1px solid #eee;padding:1rem 0;margin-top:2rem}
+.site-footer{border-top:1px solid rgba(132,198,166,0.08);padding:1rem 0;margin-top:2rem}
 .footer-inner{display:flex;justify-content:space-between;align-items:center}
 .footer-nav a{margin-left:1rem;color:#333;text-decoration:none}
 label{display:block;margin-top:.75rem}
