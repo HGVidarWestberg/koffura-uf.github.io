@@ -30,7 +30,7 @@ html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;b
 .card-link:hover{background:rgba(132,198,166,0.06);box-shadow:0 4px 8px rgba(132,198,166,0.06);border-left:4px solid rgba(132,198,166,0.16);padding-left:calc(1rem - 3px)}
 .card-media{height:140px;background:linear-gradient(135deg, rgba(132,198,166,0.12) 0%, #efe7ff 100%);border-radius:6px;margin-bottom:.75rem;object-fit:cover;width:100%;display:block}
 .muted{color:var(--muted)}
-.price{font-weight:700;font-size:1.1rem;color:var(--accent);margin:.5rem 0}
+.price{font-weight:700;font-size:1.1rem;color:var(--accent-strong);margin:.5rem 0;padding:.1rem .45rem;border-radius:6px;background:rgba(132,198,166,0.06);display:inline-block}
 .btn{background:var(--accent);color:#000;padding:.5rem 1rem;border-radius:6px;text-decoration:none;display:inline-block}
 .btn.ghost{background:transparent;color:var(--accent-strong);border:1px solid var(--accent-soft)}
 .btn.ghost:hover{background:var(--accent-soft);color:#000}
