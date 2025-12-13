@@ -32,20 +32,56 @@
     }
   }
 
+  function parseColorString(s){
+    if(!s) return null;
+    s = s.trim();
+    if(s.startsWith('rgb')){
+      return s.replace(/[^\d,]/g,'').split(',').map(Number);
+    }
+    if(s[0] === '#'){
+      let hex = s.slice(1);
+      if(hex.length === 3) hex = hex.split('').map(h=>h+h).join('');
+      return [parseInt(hex.slice(0,2),16), parseInt(hex.slice(2,4),16), parseInt(hex.slice(4,6),16)];
+    }
+    return null;
+  }
+
   function applyFromLogo(){
     const img = document.querySelector('.logo-img');
+    const logoAnchor = document.querySelector('.logo');
     if(!img) return;
+    try{ img.crossOrigin = 'anonymous'; }catch(e){}
+    console.debug('theme-from-image: logo src:', img.src, 'complete:', img.complete, 'naturalWidth:', img.naturalWidth);
+    // mark loading state on logo
+    if(logoAnchor) logoAnchor.classList.add('logo-loading');
+    function setLogoLoadedState(loaded){
+      if(!logoAnchor) return;
+      logoAnchor.classList.remove('logo-loading','logo-no-image','logo-has-image');
+      logoAnchor.classList.add(loaded ? 'logo-has-image' : 'logo-no-image');
+    }
     // if already loaded, compute immediately
     function compute(){
+      // Attempt to sample average color but still mark image as present
       const avg = averageColorFromImg(img);
       if(avg){
-        // choose a lightened bg by mixing with white
         const bg = avg.map((c)=>Math.round(255 - (255-c)*0.92));
         setCSSVars(avg, bg);
+      }else{
+        // fallback if sampling fails but image exists
+        const styles = getComputedStyle(document.documentElement);
+        const accentStr = styles.getPropertyValue('--accent') || '';
+        const accentRgb = parseColorString(accentStr) || [46,133,85];
+        const bg = accentRgb.map((c)=>Math.round(255 - (255-c)*0.92));
+        setCSSVars(accentRgb, bg);
       }
+      setLogoLoadedState(true);
     }
+    function onError(){ setLogoLoadedState(false); }
     if(img.complete && img.naturalWidth){ compute(); }
-    else img.addEventListener('load', compute);
+    else{
+      img.addEventListener('load', compute);
+      img.addEventListener('error', onError);
+    }
   }
 
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', applyFromLogo);
